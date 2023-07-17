@@ -33,3 +33,8 @@ Route::get("/books/create", [BooksController::class, "create"])
     ->middleware("can:create,App\Models\Book");
 
 require __DIR__.'/auth.php';
+
+
+Route::get("demo", function () {
+    return \App\Facades\Char::getCamelCase("call_of_duty");
+});
